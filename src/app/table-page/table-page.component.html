@@ -1,0 +1,23 @@
+<mat-card>
+<h2 style="text-align: center;" >Broken Down By Type</h2>
+<table style="width: 100%;">
+    <tr>
+        <th>Type</th>
+        <th>5 years prior</th>
+        <th>4 years prior</th>
+        <th>3 years prior</th>
+        <th>2 years prior</th>
+        <th>1 years prior</th>
+        <th>Reported Date</th>
+    </tr>
+    <tr *ngFor="let datas of array;index as i">
+        <td style="text-align: center;">{{datas?.title}}</td>
+        <td style="text-align: center;">{{datas[5]}}</td>
+        <td style="text-align: center;">{{datas[4]}}</td>
+        <td style="text-align: center;">{{datas[3]}}</td>
+        <td style="text-align: center;">{{datas[2]}}</td>
+        <td style="text-align: center;">{{datas[1]}}</td>
+        <td style="text-align: center;">{{datas['report']}}</td>
+    </tr>
+</table>
+</mat-card>

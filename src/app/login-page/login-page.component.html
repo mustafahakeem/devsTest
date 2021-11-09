@@ -1,0 +1,18 @@
+
+<mat-card>
+  <p>Please login</p>
+  <form [formGroup] = "form">
+    <mat-form-field>
+      <input matInput name="username" formControlName="userName">
+      <mat-error *ngIf = "submitted && form.controls['password'].hasError('required')">UserName is required </mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput name="password" type="password" formControlName="password">
+      <mat-error *ngIf = "submitted && form.controls['password'].hasError('required')">Password is required </mat-error>
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button color="primary" (click)="loginClicked()">Login</button>
+  </form>
+</mat-card>
+
