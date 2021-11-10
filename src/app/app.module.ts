@@ -12,6 +12,7 @@ import {MatInputModule} from '@angular/material/input';
 import {HttpClientModule} from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
     path:'login', component: LoginPageComponent,
   },
   {
-    path:'table', component: TablePageComponent
+    path:'table', component: TablePageComponent,
+    canActivate : [AuthGuard],
   },
   {
     path : '**',
